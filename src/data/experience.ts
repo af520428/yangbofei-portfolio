@@ -76,6 +76,6 @@ export const experience: ExperienceItem[] = [
     period: '2022.09 – 2026.07',
     org: '黑龙江工程学院昆仑旅游学院',
     role: '计算机科学与技术 · 本科',
-    summary: '本科在读；具身与 Agent 方向项目见下方作品。',
+    summary: '本科在读；实习、自建系统与开源工具见下方项目。',
   },
 ]

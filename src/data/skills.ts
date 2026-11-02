@@ -42,4 +42,16 @@ export const skills: SkillGroup[] = [
       'Git · Linux / WSL',
     ],
   },
+  {
+    id: 'delivery',
+    label: '交付与支持',
+    items: [
+      'Linux · Nginx 部署',
+      'ELK 日志排查',
+      'JMeter 压测与上线验收',
+      '接口文档 · 测试用例',
+      '最小复现用例编写',
+      '异构数据源接入（DB / FTP / Excel / API）',
+    ],
+  },
 ]

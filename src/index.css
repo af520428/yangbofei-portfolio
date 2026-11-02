@@ -192,6 +192,34 @@ img {
   gap: 0.75rem;
 }
 
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  list-style: none;
+  margin: 0 0 1.4rem;
+  padding: 0;
+}
+
+.hero-stats li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  background: var(--card-warm);
+  box-shadow: 3px 3px 0 var(--ink);
+  padding: 0.3rem 0.85rem;
+  font-size: 0.88rem;
+}
+
+.hero-stats strong {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--accent-red);
+}
+
 .section {
   margin-bottom: 3rem;
   animation: rise 0.6s ease both;
@@ -341,12 +369,21 @@ img {
   background: #ebe6dc;
 }
 
-.project-cover--empty {
-  display: grid;
-  place-items: center;
-  color: #8a847a;
-  font-size: 0.9rem;
-  font-weight: 700;
+.project-cover--stack {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 0.45rem;
+  padding: 1rem;
+  background: #ebe6dc;
+}
+
+.project-cover--stack span {
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  background: var(--paper);
+  font-size: 0.82rem;
 }
 
 .detail-hero-fig {

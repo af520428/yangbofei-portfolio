@@ -8,13 +8,24 @@ export function HomePage() {
   return (
     <>
       <header className="hero">
-        <p className="badge">作品集</p>
+        <p className="badge">26 届应届 · 可尽快到岗</p>
         <h1>{profile.name}</h1>
         <p className="lead">{profile.title}</p>
         <p className="lead" style={{ fontSize: '1rem', marginTop: '-0.75rem' }}>
           {profile.blurb}
         </p>
+        <ul className="hero-stats">
+          {profile.stats.map((stat) => (
+            <li key={stat.label}>
+              <strong>{stat.value}</strong>
+              <span>{stat.label}</span>
+            </li>
+          ))}
+        </ul>
         <div className="hero-actions">
+          <a className="btn" href={profile.repo} target="_blank" rel="noreferrer">
+            开源项目
+          </a>
           <a className="btn" href={`mailto:${profile.email}`}>
             发邮件
           </a>
@@ -53,7 +64,7 @@ export function HomePage() {
       <section className="section" id="skills">
         <div className="section-head">
           <h2>技能</h2>
-          <p>Agent · 具身 · 工程</p>
+          <p>Agent · 具身 · 工程 · 交付</p>
         </div>
         <div className="skills-grid">
           {skills.map((group) => (
@@ -72,7 +83,7 @@ export function HomePage() {
       <section className="section" id="projects">
         <div className="section-head">
           <h2>项目</h2>
-          <p>带图项目可点进详情看实验图 / 截图</p>
+          <p>点开可看实机截图、动图与实验对照</p>
         </div>
         <div className="projects-grid">
           {projects.map((project) => (
@@ -87,7 +98,11 @@ export function HomePage() {
                   <img src={project.cover} alt={project.name} loading="lazy" />
                 </div>
               ) : (
-                <div className="project-cover project-cover--empty">可视化待补</div>
+                <div className="project-cover project-cover--stack">
+                  {project.stack.slice(0, 5).map((item) => (
+                    <span key={item}>{item}</span>
+                  ))}
+                </div>
               )}
               {project.featured ? <span className="badge">重点</span> : null}
               <h3>{project.name}</h3>
@@ -102,7 +117,7 @@ export function HomePage() {
       <section className="section" id="contact">
         <div className="section-head">
           <h2>联系</h2>
-          <p>欢迎沟通实习 / 校招机会</p>
+          <p>求职方向：技术支持工程师（售前 / 售后）· 可尽快到岗</p>
         </div>
         <StickerCard tone="warm">
           <p style={{ margin: '0 0 0.75rem' }}>
